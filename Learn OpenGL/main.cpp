@@ -50,6 +50,13 @@ int main() {
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	// check and call events and swap buffers
+	glfwPollEvents();
+	glfwSwapBuffers(window);
+
 }
 
 void processInput(GLFWwindow* window) {
